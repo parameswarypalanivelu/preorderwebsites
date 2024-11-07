@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Food Preorder & Feedback</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <header>
+        <h1>Food Preorder & Feedback</h1>
+        <nav>
+            <ul>
+                <li><a href="#preorder">Preorder</a></li>
+                <li><a href="#feedback">Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Preorder Section -->
+    <section id="preorder">
+        <h2>Preorder Your Food</h2>
+        <form id="preorder-form">
+            <label for="food-item">Select Food Item:</label>
+            <input type="text" id="food-item" name="food-item" min="5" required>
+             
+            
+
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" required>
+
+            <label for="delivery-time">Preferred Delivery Time:</label>
+            <input type="datetime-local" id="delivery-time" name="delivery-time" required>
+
+            <button type="submit">Submit Order</button>
+        </form>
+        <div id="order-confirmation" class="hidden">
+            <h3>Order Confirmation:</h3>
+            <p>Your order has been placed successfully!</p>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section id="feedback">
+        <h2>Give Feedback</h2>
+        <form id="feedback-form">
+            <label for="customer-name">Name:</label>
+            <input type="text" id="customer-name" name="customer-name" required>
+
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="1">1 (Poor)</option>
+                <option value="2">2</option>
+                <option value="3">3 (Average)</option>
+                <option value="4">4</option>
+                <option value="5">5 (Excellent)</option>
+            </select>
+
+            <label for="comments">Comments:</label>
+            <textarea id="comments" name="comments" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <div id="feedback-confirmation" class="hidden">
+            <h3>Thank you for your feedback!</h3>
+        </div>
+    </section>
+    
+    <!-- Orders List Section -->
+ <section id="orders">
+    <h2>All Orders</h2>
+    <ul id="orders-list">
+        <!-- Orders will be dynamically added here -->
+    </ul>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Food Preorder & Feedback Service. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
